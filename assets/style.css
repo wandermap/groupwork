@@ -1,7 +1,11 @@
 /* 基本設定 */
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
 body {
   background-color: powderblue;
   min-height: calc(100vh);
+}
+* {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
 /* レイアウト調整 */
@@ -11,10 +15,20 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .center {
   text-align: center;
 }
 
 .center input {
   text-align: center;
+}
+
+/* コンポーネント調整 */
+.card-content {
+  padding: 1rem;
 }

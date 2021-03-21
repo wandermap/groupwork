@@ -6,18 +6,18 @@
           {{ title }}
         </p>
       </header>
+      <slot />
       <div class="card-content">
         <div class="content has-text-centered">
-          <b-icon :icon="icon" size="is-large" type="is-primary" />
+          <!-- <b-icon :icon="icon" size="is-large" type="is-primary" /> -->
+          {{ info }}
         </div>
       </div>
-      <footer class="card-footer">
+      <!-- <footer class="card-footer">
         <div class="card-footer-item">
-          <span>
-            <slot />
-          </span>
+          <span> </span>
         </div>
-      </footer>
+      </footer> -->
     </div>
   </div>
 </template>
@@ -31,7 +31,15 @@ export default {
     },
     icon: {
       type: String,
-      required: true,
+      required: false,
+    },
+    info: {
+      type: String,
+      required: false,
+    },
+    rel: {
+      type: String,
+      required: false,
     },
   },
 }

@@ -1,5 +1,9 @@
 <template>
   <div>
+    <link
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      rel="stylesheet"
+    />
     <b-navbar class="is-primary">
       <template #brand>
         <b-navbar-item tag="router-link" :to="{ path: '/' }">
@@ -49,14 +53,44 @@ export default {
     return {
       items: [
         {
-          title: 'Home',
+          title: 'コース選択',
           icon: 'home',
           to: { name: 'index' },
         },
         {
-          title: 'Inspire',
+          title: 'レッスン選択',
           icon: 'lightbulb',
-          to: { name: 'inspire' },
+          to: { name: 'lesson' },
+        },
+        {
+          title: 'レクチャー',
+          icon: 'lightbulb',
+          to: { name: 'lecture' },
+        },
+        {
+          title: '確認問題',
+          icon: 'lightbulb',
+          to: { name: 'check' },
+        },
+        {
+          title: '自己評価',
+          icon: 'lightbulb',
+          to: { name: 'self-assessment' },
+        },
+        {
+          title: 'メンバー評価',
+          icon: 'lightbulb',
+          to: { name: 'group-assessment' },
+        },
+        {
+          title: 'メンバー評価２',
+          icon: 'lightbulb',
+          to: { name: 'group-assessment2' },
+        },
+        {
+          title: '先生の評価',
+          icon: 'lightbulb',
+          to: { name: 'teacher-assessment' },
         },
       ],
     }

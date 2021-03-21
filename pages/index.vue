@@ -1,20 +1,28 @@
 <template>
   <section class="section">
     <div class="columns is-mobile">
-      <card title="Free" icon="github"> </card>
-
-      <card title="Responsive" icon="cellphone-link">
-        <b class="has-text-grey"> Every </b> component is responsive
-        <img src="~/static/space.jpg" alt="" />
+      <card title="宇宙開発" info="ロケットを作ろう" rel="#">
+        <nuxt-link to="lesson">
+          <img src="~/static/space.jpg" alt="" />
+        </nuxt-link>
       </card>
 
-      <card title="Modern" icon="alert-decagram">
-        Built with <a href="https://vuejs.org/"> Vue.js </a> and
-        <a href="http://bulma.io/"> Bulma </a>
+      <card title="調理実習" info="カレーを作ろう" rel="#">
+        <nuxt-link to="lesson">
+          <img src="~/static/curryruce.png" alt="" style="height: 130px" />
+        </nuxt-link>
       </card>
 
-      <card title="Lightweight" icon="arrange-bring-to-front">
-        No other internal dependency
+      <card title="模擬裁判" info="ロケットを作ろう" rel="#">
+        <nuxt-link to="lesson">
+          <img src="~/static/saiban.png" alt="" />
+        </nuxt-link>
+      </card>
+
+      <card title="宇宙開発" info="ロケットを作ろう" rel="#">
+        <nuxt-link to="lesson">
+          <img src="~/static/space.jpg" alt="" />
+        </nuxt-link>
       </card>
     </div>
   </section>
@@ -25,7 +33,7 @@ import Card from '~/components/Card'
 
 export default {
   name: 'HomePage',
-
+  rel: '',
   components: {
     Card,
   },
