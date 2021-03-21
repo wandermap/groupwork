@@ -7,6 +7,11 @@ $primary-light: findLightColor($primary);
 $primary-dark: findDarkColor($primary);
 $primary-invert: findColorInvert($primary);
 
+$success: rgb(2, 134, 90);
+$success-light: findLightColor($success);
+$success-dark: findDarkColor($success);
+$success-invert: findColorInvert($success);
+
 // Lists and maps
 $custom-colors: null !default;
 $custom-shades: null !default;

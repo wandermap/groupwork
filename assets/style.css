@@ -1,11 +1,8 @@
 /* 基本設定 */
-@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
-body {
-  background-color: powderblue;
-  min-height: calc(100vh);
-}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
+
 * {
-  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 /* レイアウト調整 */

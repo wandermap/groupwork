@@ -4,7 +4,7 @@
       href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
       rel="stylesheet"
     />
-    <b-navbar class="is-primary" fixed-top>
+    <b-navbar class="is-success" fixed-top>
       <template #brand>
         <b-navbar-item tag="router-link" :to="{ path: '/' }">
           <b>グループワーク</b>
@@ -29,7 +29,7 @@
       </template>
     </b-navbar>
 
-    <section class="main-content columns">
+    <section class="main-content columns has-background-success-light">
       <aside class="column is-2 section">
         <ul class="menu-list">
           <li v-for="(item, key) of items" :key="key">
@@ -53,58 +53,32 @@ export default {
     return {
       items: [
         {
-          title: 'コース選択',
+          title: 'クラス選択',
           icon: 'home',
-          to: { name: 'index' },
+          to: { name: 't.classroom' },
         },
         {
-          title: 'レッスン選択',
-          icon: 'lightbulb',
-          to: { name: 'lesson' },
+          title: 'グループ選択',
+          icon: 'home',
+          to: { name: 't.member' },
         },
         {
-          title: 'レクチャー',
-          icon: 'lightbulb',
-          to: { name: 'lecture' },
-        },
-        {
-          title: '確認問題',
-          icon: 'lightbulb',
-          to: { name: 'check' },
-        },
-        {
-          title: '自己評価',
-          icon: 'lightbulb',
-          to: { name: 'self-assessment' },
-        },
-        {
-          title: 'メンバー評価',
-          icon: 'lightbulb',
-          to: { name: 'group-assessment' },
-        },
-        {
-          title: 'メンバー評価２',
-          icon: 'lightbulb',
-          to: { name: 'group-assessment2' },
-        },
-        {
-          title: '先生の評価',
-          icon: 'lightbulb',
-          to: { name: 'teacher-assessment' },
+          title: 'グループワーク',
+          icon: 'home',
+          to: { name: 't.groupwork' },
         },
       ],
     }
   },
 }
 </script>
-
 <style>
 .main-content {
-  background-color: powderblue;
-  min-height: calc(100vh);
+  min-height: calc(100vh - 50px);
 }
+
 /* .menu-list a.is-active {
-  background-color: #002d52;
+  background-color: rgb(2, 134, 90);
   color: #fff;
 } */
 </style>

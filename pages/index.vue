@@ -32,6 +32,7 @@
 import Card from '~/components/Card'
 
 export default {
+  layout: 'primary',
   name: 'HomePage',
   rel: '',
   components: {
