@@ -1,0 +1,20 @@
+/* 基本設定 */
+body {
+  background-color: powderblue;
+  min-height: calc(100vh);
+}
+
+/* レイアウト調整 */
+.grid {
+  display: grid;
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.center {
+  text-align: center;
+}
+
+.center input {
+  text-align: center;
+}
