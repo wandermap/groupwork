@@ -32,7 +32,7 @@
         </b-table>
       </div>
     </div>
-    <nuxt-link to="self-assessment" class="button">自己評価へ進む</nuxt-link>
+    <nuxt-link to="group-work" class="button">グループワークへ進む</nuxt-link>
   </section>
 </template>
 
@@ -75,7 +75,8 @@ export default Vue.extend({
           this.num = this.len
           this.question = 'クリア！'
           this.fin = true
-          this.$buefy.dialog.alert('自己評価へ進む')
+          this.$buefy.dialog.alert('グループワークへ進む')
+          this.$router.push('/group-work')
           return
         }
         this.num = this.num + 1

@@ -73,6 +73,11 @@ export default {
           to: { name: 'check' },
         },
         {
+          title: 'グループワーク',
+          icon: 'lightbulb',
+          to: { name: 'group-work' },
+        },
+        {
           title: '自己評価',
           icon: 'lightbulb',
           to: { name: 'self-assessment' },

@@ -1,5 +1,8 @@
 <template>
   <section class="section">
+    <h2 class="title is-3">
+      コース選択 <b-icon icon="rocket" size="is-large" />
+    </h2>
     <div class="columns is-mobile">
       <card title="宇宙開発" info="ロケットを作ろう" rel="#">
         <nuxt-link to="lesson">
