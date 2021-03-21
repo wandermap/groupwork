@@ -13,7 +13,7 @@
         </nuxt-link>
       </card>
 
-      <card title="模擬裁判" info="ロケットを作ろう" rel="#">
+      <card title="模擬裁判" info="法と戦おう" rel="#">
         <nuxt-link to="lesson">
           <img src="~/static/saiban.png" alt="" />
         </nuxt-link>

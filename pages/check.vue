@@ -1,35 +1,38 @@
 <template>
-  <section class="section columns">
-    <div class="column center">
-      <div class="title">
-        <div class="">確認問題 <b-icon icon="rocket" size="is-large" /></div>
-        <div class="underber"></div>
+  <section class="section">
+    <div class="columns">
+      <div class="column center">
+        <div class="title">
+          <div class="">確認問題 <b-icon icon="rocket" size="is-large" /></div>
+          <div class="underber"></div>
+        </div>
+        {{ num }}/{{ len }}
+        <div class="is-size-2">{{ question }}</div>
+
+        <b-input
+          v-if="!fin"
+          v-model="form"
+          size="is-large"
+          class="center mt-2"
+          autofocus
+        ></b-input>
       </div>
-      {{ num }}/{{ len }}
-      <div class="is-size-2">{{ question }}</div>
 
-      <b-input
-        v-if="!fin"
-        v-model="form"
-        size="is-large"
-        class="center mt-2"
-        autofocus
-      ></b-input>
+      <div class="column is-4">
+        <b-table :data="ens">
+          <b-table-column field="ja" label="日本語" v-slot="props">
+            {{ props.row.ja }}
+          </b-table-column>
+          <b-table-column field="en" label="英語" v-slot="props">
+            <div v-if="props.row.result == '〇'">{{ props.row.en }}</div>
+          </b-table-column>
+          <b-table-column field="result" label="クリア" v-slot="props">
+            {{ props.row.result }}
+          </b-table-column>
+        </b-table>
+      </div>
     </div>
-
-    <div class="column is-4">
-      <b-table :data="ens">
-        <b-table-column field="ja" label="日本語" v-slot="props">
-          {{ props.row.ja }}
-        </b-table-column>
-        <b-table-column field="en" label="英語" v-slot="props">
-          <div v-if="props.row.result == '〇'">{{ props.row.en }}</div>
-        </b-table-column>
-        <b-table-column field="result" label="クリア" v-slot="props">
-          {{ props.row.result }}
-        </b-table-column>
-      </b-table>
-    </div>
+    <nuxt-link to="self-assessment" class="button">自己評価へ進む</nuxt-link>
   </section>
 </template>
 
@@ -72,7 +75,7 @@ export default Vue.extend({
           this.num = this.len
           this.question = 'クリア！'
           this.fin = true
-          this.$buefy.dialog.alert('クリア!')
+          this.$buefy.dialog.alert('自己評価へ進む')
           return
         }
         this.num = this.num + 1

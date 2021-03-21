@@ -40,6 +40,8 @@
         </b-tabs>
       </div>
     </section>
+
+    <b-button type="is-warning" @click="alert">評価入力を完了する</b-button>
   </section>
 </template>
 
@@ -69,6 +71,18 @@ export default Vue.extend({
         { id: 3, name: 'タカハシ' },
       ],
     }
+  },
+  methods: {
+    alert() {
+      this.$buefy.dialog.confirm({
+        message: 'お疲れさまでした',
+        type: 'is-warning',
+        confirmText: '終了します',
+        cancelText: 'キャンセル',
+        hasIcon: false,
+        onConfirm: () => this.$router.push('/'),
+      })
+    },
   },
 })
 </script>

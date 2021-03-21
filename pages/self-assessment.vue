@@ -167,6 +167,9 @@
         <b-input maxlength="200" type="textarea"></b-input>
       </b-field>
     </section>
+    <nuxt-link to="group-assessment" class="button mt-3"
+      >メンバー評価へ進む</nuxt-link
+    >
   </section>
 </template>
 
